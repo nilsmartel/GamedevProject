@@ -22017,7 +22017,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
   m_Size: {x: 0.26097336, y: 0.15}
   m_EdgeRadius: 0
@@ -22102,7 +22102,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 100
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -22136,15 +22136,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 602eb3e3eab16dc499ad5914c3235278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 3000
-  m_MovementSmoothing: 0.089
+  m_JumpForce: 10000
+  m_CrouchSpeed: 0.36
+  m_MovementSmoothing: 0.215
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 55
   m_GroundCheck: {fileID: 226732256}
   m_CeilingCheck: {fileID: 1177369730}
+  m_CrouchDisableCollider: {fileID: 723640914}
   OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &723640920
@@ -22160,7 +22165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 723640919}
-  runSpeed: 1000
+  runSpeed: 900
 --- !u!1 &767685033
 GameObject:
   m_ObjectHideFlags: 0
